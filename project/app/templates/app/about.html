@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    
+
+    .abt2 {
+        /* width: 500px; */
+        margin-top: 161px;
+        margin-left: 50px;
+    }
+    .abt2 h1{
+        color: rgb(248, 34, 70);
+        font-size: 90px;
+    }
+    .abt2 h2{
+        font-size: xx-large;
+        color: rgb(2, 2, 78);
+    }
+    .abt2 h3{
+        font-weight: lighter;
+        font-size: medium;
+    }
+    .abt{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .abt_img img{
+  margin-left: 0px;
+    }
+</style>
+<body>
+    <div class="abt">
+        <div class="abt_img">
+            <img src="{% static 'images\img6.jpg' %}"> 
+        </div>
+        <div class="abt2">
+            <h1>Sale Of 20% </h1><br>
+            <h2>On Everything</h2><br><br>
+            <h3>Explicabo esse amet tempore quibldiuse laudantium ,labrium akweuiioewf<br>eque magnam fugait? hic
+            Esse dicta aliquid error repaudlicate<br>earum suspict fuagit moletis,venim<br>
+            vel architacto ventaies dleien skjrfsdmj dfdfkjerifnwlke wawknn akdiffnef klajff<br>
+            modi imodeit sequie ausdufnc dkfgijr....
+            </h3>
+        </div>
+        
+    </div>
+  <!-- <img src="{% static 'images\img6.jpg' %}"> -->
+  
+</body>
+
+
+{% endblock %}

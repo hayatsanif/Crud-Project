@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+    <style>
+        h1{
+            margin-top: 5%;
+        }
+        thead{
+            background-color: rgb(2, 23, 39);
+            color: white;
+        }
+        tbody{
+            background-color: rgb(240, 246, 252);
+            /* color: white; */
+        }
+        tbody i{
+            font-size: large;
+            color: blue;
+            margin-left: 4%;
+            
+        }
+    </style>
+</head>
+<center>
+
+<h1>Data</h1>
+
+   
+<table height="100px" width="599x" border="1px" >
+    <thead >
+       
+        <tr >
+            <th>ID</th>
+            <th>Email</th>
+            <th>Query</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in key1 %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.queryemail}}</td>
+            <td>{{i.query}}</td>
+            <td><a href="{% url 'edit' pk=i.id %}"><i  class="fa-regular fa-pen-to-square"></i></a></td>
+            <td><a href="{% url 'delete' pk=i.id  %}"><i class="fa-solid fa-trash-can"></i></a></td>
+        </tr>
+    
+        {% endfor %}
+    </tbody>
+</table>
+</center>
+</body>
+{% endblock %}

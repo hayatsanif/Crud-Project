@@ -1,0 +1,84 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+   
+body{
+    /* background-image: url({% static 'images\form.png' %}); */
+    /* background-color: #DBCC95; */
+    background-image: linear-gradient(45deg,rgb(173, 173, 247),rgb(250, 157, 157));
+    height: 640px;
+    
+}
+
+.int {
+    height: 461px;
+    width: 394px;
+    background-color:rgb(175 116 116 / 20%);
+
+   margin-left: 35%;
+   margin-top: 77px;
+   border-radius: 6%;
+   box-shadow: 7px 7px 15px 6px grey;
+ 
+}
+.int h2{
+font-style: normal;
+}
+.int input{
+   
+    font-size: medium;
+    height: 25px;
+    width:225px;
+    text-align: center;
+    margin-top: 15px;
+    
+    /* box-shadow: 2px 2px 2px rgb(135, 124, 233);
+    */
+   /* margin: 10px; */
+}
+
+.int h3{
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: x-large;
+    color: white;
+}
+
+</style>
+
+<body>
+
+<div class=" form">
+    
+    
+        <div class="form2">
+            
+            <div class="int">
+                
+<form action="{% url 'submit' %}" method="post">
+    {% csrf_token %}
+    
+    <center>
+        <h3 style="color: rgb(66, 6, 6);">{{msg}}</h3>
+        <h3 style="color: black;">Sign Up</h3>
+<input  type="text" name="fname" placeholder="Enter Name"><br><br>
+<input  type="text" name="lname" placeholder="Enter lastName"><br><br>
+<input  type="text" name="email" placeholder="Enter Email"><br><br>
+<input  type="text" name="city" placeholder="Enter City"><br><br>
+<input  type="password" name="password" placeholder="Enter Password"><br><br>
+<input  type="text"name="contact" placeholder="Enter Contact" ><br><br>
+
+    
+<input style="height: 30px; width: 79px; border: 1px solid black; font-size: large; font-weight: bold;"  type="submit" value="submit">
+<!-- <h3>Do You Have any account </h3> -->
+
+</center>
+
+</form>
+</div>
+</div>
+</div>
+</body>
+{% endblock %}

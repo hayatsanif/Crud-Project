@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<body>
+    <style>
+   .simg2 img{
+        
+    height: 440px;
+    margin: 45px;
+    /* margin-left: 4%; */
+   /* border-radius: 60%; */
+        }
+        .simg2{
+            /* justify-content: space-around; */
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        .simg2 img:hover{
+            transition: 2s ease-in;
+            transform: 1.2;
+
+            
+        }
+    </style>
+
+<div class="servimg">
+    <div class="simg2">
+<img src="{% static 'images\servimg4.jpg' %}">
+<img src="{% static 'images\servimg2.jpg' %}">
+<img src="{% static 'images\servimg3.webp' %}">
+    </div>
+</div>
+
+
+</body>
+{% endblock %}

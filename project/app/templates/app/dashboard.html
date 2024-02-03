@@ -1,0 +1,75 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'css\style.css' %}"> -->
+    <body>
+    <style>
+       .dashtag input{
+        text-align: center;
+    font-size: large;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid blue;
+       }
+       .dashtag h1{
+        margin-top: 4%;
+       }
+    /* .querybox{
+        height: 100px;
+        width: 200px; */
+        /* border: 1px solid black; */
+        
+
+    /* } */
+    .querybox input{
+        height: 100px;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+    <div class=" dashform">
+       
+    
+        <div class="dashform2">
+            
+            <div class="dashtag">
+                
+<form action="{% url 'query' %}" method="post">
+    {% csrf_token %}
+    
+    <center>
+       
+        <h1 >Dashboard</h1>
+
+<input type="text" name="email" placeholder="Enter Email" value={{email}}><br><br>
+
+<div class="querybox"> <input  type="textarea" name="Query" placeholder="Enter Query" ></div><br><br>
+
+<input style="height: 30px; width: 70px; border: 1px solid black; font-size: large; font-weight: bold;"
+  type="submit" value=" Query"><br>
+  
+<!-- <h3>Do You Have any account </h3> -->
+
+</center>
+
+</form>
+
+<form action="{% url 'show' pk=email %}">
+    <center>
+    <input style="height: 30px; width: 110px; border: 1px solid black; font-size: large; font-weight: bold;"
+  type="submit" value=" show data">
+</center>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+{% endblock %}
